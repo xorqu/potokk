@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxh4ccvgkqnyy"]
+
+[ext_resource type="PackedScene" uid="uid://dffgt2qm2t6q8" path="res://player/player.tscn" id="1_xou5w"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_rhrxl"]
+size = Vector2(50, 50)
+orientation = 1
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_53mrr"]
+data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qaegu"]
+radius = 2.48
+
+[node name="Level1" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_xou5w")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_rhrxl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_53mrr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.423314, 0.905983, 0, -0.905983, 0.423314, 0, 1.58956, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42892, 4.29929, 0)
+mesh = SubResource("SphereMesh_qaegu")

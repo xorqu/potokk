@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dffgt2qm2t6q8"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_hj8qt"]
+[ext_resource type="Script" path="res://player/player_state.gd" id="2_ptvnh"]
+[ext_resource type="AudioStream" uid="uid://fjvgl6fryubo" path="res://player/walk.mp3" id="4_ovgyd"]
+
+[sub_resource type="Resource" id="Resource_6eldn"]
+script = ExtResource("2_ptvnh")
+hp = 100
+max_hp = 100
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdjtu"]
+height = 3.0
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+collision_layer = 4
+script = ExtResource("1_hj8qt")
+state = SubResource("Resource_6eldn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_pdjtu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -100, 0)
+collision_mask = 3
+debug_shape_thickness = 5
+
+[node name="Item_marker" type="Marker3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226575, -0.4, -0.7)
+
+[node name="Walk_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ovgyd")
+volume_db = -2.533
+autoplay = true
