@@ -1,30 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxh4ccvgkqnyy"]
+[gd_scene load_steps=5 format=3 uid="uid://dxh4ccvgkqnyy"]
 
 [ext_resource type="Script" path="res://levels/level1.gd" id="1_gtqee"]
 [ext_resource type="PackedScene" uid="uid://dffgt2qm2t6q8" path="res://player/player.tscn" id="1_xou5w"]
 [ext_resource type="PackedScene" uid="uid://bvdyed54dcgfl" path="res://levels/level_1.tscn" id="3_s3xtl"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_qaegu"]
-radius = 2.48
-
 [sub_resource type="Environment" id="Environment_glk0n"]
-volumetric_fog_enabled = true
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_gtqee")
 
 [node name="Player" parent="." instance=ExtResource("1_xou5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -318.287, 3.7026, 11.0147)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.423314, 0.905983, 0, -0.905983, 0.423314, 0, 1.58956, 0)
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(-0.742575, -0.369249, -0.558783, -0.533005, -0.179409, 0.826873, -0.405572, 0.911849, -0.0635867, -14.3695, 7.22967, 3.44991)
+light_energy = 6.495
 shadow_enabled = true
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6647, 6.92843, -7.05635)
-mesh = SubResource("SphereMesh_qaegu")
+omni_range = 14.311
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_glk0n")
 
 [node name="level1" parent="." instance=ExtResource("3_s3xtl")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -360.831, 38.4318, 47.9043)
+light_energy = 12.798
+shadow_enabled = true
+omni_range = 22.523
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -407.812, 50.1045, 47.9043)
+light_energy = 12.798
+shadow_enabled = true
+omni_range = 22.523

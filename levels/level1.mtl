@@ -1,12 +1,15 @@
+newmtl bricks2
+map_Kd ..\textures\bricks2.png
+
+newmtl concrete
+map_Kd ..\textures\concrete.png
+
 newmtl concrete2
 map_Kd ..\textures\concrete2.png
 
-newmtl organic
-map_Kd ..\textures\organic.png
+newmtl pattern
+map_Kd ..\textures\pattern.png
 
-newmtl pattern2
-map_Kd ..\textures\pattern2.png
-
-newmtl rusty
-map_Kd ..\textures\rusty.png
+newmtl tiles7
+map_Kd ..\textures\tiles7.png
 
