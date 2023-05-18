@@ -1,24 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxh4ccvgkqnyy"]
+[gd_scene load_steps=8 format=3 uid="uid://dxh4ccvgkqnyy"]
 
 [ext_resource type="Script" path="res://levels/level1.gd" id="1_gtqee"]
 [ext_resource type="PackedScene" uid="uid://dffgt2qm2t6q8" path="res://player/player.tscn" id="1_xou5w"]
 [ext_resource type="PackedScene" uid="uid://bvdyed54dcgfl" path="res://levels/level_1.tscn" id="3_s3xtl"]
+[ext_resource type="Texture2D" uid="uid://dja4011dsoe8s" path="res://textures/wRZ5XKGzRaI.jpg" id="4_dyf4f"]
+[ext_resource type="Texture2D" uid="uid://jh0luqtrgpgq" path="res://textures/e6IUv1KOlqE.jpg" id="5_fr8xj"]
+[ext_resource type="Texture2D" uid="uid://divkip60anxwk" path="res://textures/JCbJW9qEYuU.jpg" id="6_d16ew"]
 
 [sub_resource type="Environment" id="Environment_glk0n"]
 fog_enabled = true
-fog_light_color = Color(0, 0, 0, 1)
+fog_light_color = Color(0.239216, 0.407843, 0.392157, 1)
+fog_density = 0.0559
+adjustment_enabled = true
+adjustment_contrast = 2.25
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_gtqee")
 
 [node name="Player" parent="." instance=ExtResource("1_xou5w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -318.287, 3.7026, 11.0147)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(-0.742575, -0.369249, -0.558783, -0.533005, -0.179409, 0.826873, -0.405572, 0.911849, -0.0635867, -14.3695, 7.22967, 3.44991)
-light_energy = 6.495
-shadow_enabled = true
-omni_range = 14.311
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8195, 3.703, -6.01283)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_glk0n")
@@ -26,14 +26,73 @@ environment = SubResource("Environment_glk0n")
 [node name="level1" parent="." instance=ExtResource("3_s3xtl")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+[node name="light" type="Node" parent="."]
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2518, 0.538535, -63.2955)
+light_energy = 8.393
+shadow_enabled = true
+omni_range = 27.3066
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2518, 0.538535, -22.937)
+light_energy = 8.393
+shadow_enabled = true
+omni_range = 27.3066
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8899, 15.4808, 12.2022)
+light_energy = 8.393
+shadow_enabled = true
+omni_range = 27.3066
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -360.831, 38.4318, 47.9043)
 light_energy = 12.798
 shadow_enabled = true
 omni_range = 22.523
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+[node name="OmniLight3D3" type="OmniLight3D" parent="light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -407.812, 50.1045, 47.9043)
 light_energy = 12.798
 shadow_enabled = true
 omni_range = 22.523
+
+[node name="OmniLight3D" type="OmniLight3D" parent="light"]
+transform = Transform3D(-0.742575, -0.369248, -0.558783, -0.533005, -0.179409, 0.826873, -0.405572, 0.911849, -0.0635869, -14.3695, 7.22967, 3.44991)
+light_energy = 6.495
+shadow_enabled = true
+omni_range = 14.311
+
+[node name="sprits" type="Node" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="sprits"]
+transform = Transform3D(0.257836, 0, 0, 0, 0.257836, 0, 0, 0, 0.257836, 0, 2.84889, 8.50954)
+texture_filter = 0
+texture = ExtResource("4_dyf4f")
+
+[node name="Sprite3D2" type="Sprite3D" parent="sprits"]
+transform = Transform3D(0.029407, 0, 0.256154, 0, 0.257836, 0, -0.256154, 0, 0.029407, 24.0699, 2.84889, -4.27256)
+texture_filter = 0
+texture = ExtResource("5_fr8xj")
+
+[node name="Sprite3D3" type="Sprite3D" parent="sprits"]
+transform = Transform3D(-0.0598601, 0, 0.345421, 0, 0.471327, 0, 0.521421, 0, 0.039655, 24.5191, 2.79594, -63.1935)
+texture_filter = 0
+texture = ExtResource("6_d16ew")
+
+[node name="sph" type="Node" parent="."]
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="sph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8538, 8.4387, -111.858)
+radius = 1.92925
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="sph"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8538, 8.4387, -111.858)
+radius = 5.883
+
+[node name="OmniLight3D" type="OmniLight3D" parent="sph/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601978, -7.90016, 11.0385)
+light_energy = 8.393
+shadow_enabled = true
+omni_range = 27.3066

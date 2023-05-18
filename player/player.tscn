@@ -38,3 +38,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226575, -0.4, -0.7)
 stream = ExtResource("4_ovgyd")
 volume_db = -2.533
 autoplay = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98682, 0)
+light_energy = 4.14
+shadow_enabled = true
+omni_range = 28.8
+omni_attenuation = 1.27456
