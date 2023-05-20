@@ -59,7 +59,7 @@ shadow_enabled = true
 omni_range = 22.523
 
 [node name="OmniLight3D" type="OmniLight3D" parent="light"]
-transform = Transform3D(-0.742575, -0.369248, -0.558783, -0.533005, -0.179409, 0.826873, -0.405572, 0.911849, -0.0635869, -14.3695, 7.22967, 3.44991)
+transform = Transform3D(-0.742575, -0.369248, -0.558783, -0.533005, -0.179409, 0.826873, -0.405572, 0.911849, -0.0635864, -17.3249, 7.22967, 3.44991)
 light_energy = 6.495
 shadow_enabled = true
 omni_range = 14.311
