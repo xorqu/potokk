@@ -5,7 +5,7 @@ class_name Player
 @export_range(1, 35, 1) var speed: float = 14 # m/s
 @export_range(10, 400, 1) var acceleration: float = 100 # m/s^2
 
-@export_range(0.1, 3.0, 0.1) var jump_height: float = 3 # m
+@export_range(0.1, 4.0, 0.1) var jump_height: float = 3.5 # m
 @export_range(0.1, 9.25, 0.05, "or_greater") var camera_sens: float = 160
 
 #var hp = 100
@@ -19,7 +19,7 @@ var jumping: bool = false
 var mouse_captured: bool = false
 
 #var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-var gravity: float = 20.0
+var gravity: float = 40.0
 #
 var move_dir: Vector2 # Input direction for movement
 var look_dir: Vector2 # Input direction for look/aim
@@ -47,6 +47,8 @@ func _physics_process(delta: float) -> void:
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	move_and_slide()
 	walk_sound_play()
+	if position.y < -20:
+		death()
 
 
 func capture_mouse() -> void:
@@ -101,4 +103,5 @@ func heal(heal_hp):
 	
 func death():
 	print("death")
+	get_tree().reload_current_scene()
 

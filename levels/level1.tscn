@@ -67,17 +67,17 @@ omni_range = 14.311
 [node name="sprits" type="Node" parent="."]
 
 [node name="Sprite3D" type="Sprite3D" parent="sprits"]
-transform = Transform3D(0.257836, 0, 0, 0, 0.257836, 0, 0, 0, 0.257836, 0, 2.84889, 8.50954)
+transform = Transform3D(0.257836, 0, 0, 0, 0.257836, 0, 0, 0, 0.257836, 14.5712, 2.84889, 26.2965)
 texture_filter = 0
 texture = ExtResource("4_dyf4f")
 
 [node name="Sprite3D2" type="Sprite3D" parent="sprits"]
-transform = Transform3D(0.029407, 0, 0.256154, 0, 0.257836, 0, -0.256154, 0, 0.029407, 24.0699, 2.84889, -4.27256)
+transform = Transform3D(0.029407, 0, 0.256154, 0, 0.257836, 0, -0.256154, 0, 0.029407, 24.8153, 2.94632, -16.8392)
 texture_filter = 0
 texture = ExtResource("5_fr8xj")
 
 [node name="Sprite3D3" type="Sprite3D" parent="sprits"]
-transform = Transform3D(-0.0598601, 0, 0.345421, 0, 0.471327, 0, 0.521421, 0, 0.039655, 24.5191, 2.79594, -63.1935)
+transform = Transform3D(-0.0598601, 0, 0.345421, 0, 0.471327, 0, 0.521421, 0, 0.039655, 23.203, 2.79594, -63.2533)
 texture_filter = 0
 texture = ExtResource("6_d16ew")
 
