@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxh4ccvgkqnyy"]
+[gd_scene load_steps=11 format=3 uid="uid://dxh4ccvgkqnyy"]
 
 [ext_resource type="Script" path="res://levels/level1.gd" id="1_gtqee"]
 [ext_resource type="PackedScene" uid="uid://dffgt2qm2t6q8" path="res://player/player.tscn" id="1_xou5w"]
+[ext_resource type="Environment" uid="uid://doifmc7cwcxwi" path="res://levels/level1env.tres" id="3_6uvll"]
 [ext_resource type="PackedScene" uid="uid://bvdyed54dcgfl" path="res://levels/level_1.tscn" id="3_s3xtl"]
 [ext_resource type="Texture2D" uid="uid://dja4011dsoe8s" path="res://textures/wRZ5XKGzRaI.jpg" id="4_dyf4f"]
 [ext_resource type="Texture2D" uid="uid://jh0luqtrgpgq" path="res://textures/e6IUv1KOlqE.jpg" id="5_fr8xj"]
@@ -9,21 +10,17 @@
 [ext_resource type="FontFile" uid="uid://cdbfbi1826fs6" path="res://Monocraft.ttf" id="7_1sder"]
 [ext_resource type="AudioStream" uid="uid://bn07sclw84nox" path="res://sound/ost1.mp3" id="7_tj8yc"]
 
-[sub_resource type="Environment" id="Environment_glk0n"]
-fog_enabled = true
-fog_light_color = Color(0.239216, 0.407843, 0.392157, 1)
-fog_density = 0.0559
-adjustment_enabled = true
-adjustment_contrast = 2.25
+[sub_resource type="BoxShape3D" id="BoxShape3D_ttrpu"]
+size = Vector3(2.24384, 1, 5.8564)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_gtqee")
 
 [node name="Player" parent="." instance=ExtResource("1_xou5w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8195, 3.703, -6.01283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -378.316, 39.0257, -9.09681)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_glk0n")
+environment = ExtResource("3_6uvll")
 
 [node name="level1" parent="." instance=ExtResource("3_s3xtl")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
@@ -49,7 +46,7 @@ shadow_enabled = true
 omni_range = 27.3066
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="light"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -360.831, 38.4318, 47.9043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -361.816, 38.4318, 47.9043)
 light_energy = 12.798
 shadow_enabled = true
 omni_range = 22.523
@@ -65,6 +62,12 @@ transform = Transform3D(-0.742575, -0.369248, -0.558783, -0.533005, -0.179409, 0
 light_energy = 6.495
 shadow_enabled = true
 omni_range = 14.311
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="light"]
+transform = Transform3D(-0.742575, -0.369248, -0.558783, -0.533005, -0.179409, 0.826873, -0.405572, 0.911849, -0.0635864, 1.81335, 7.22967, -33.1605)
+light_energy = 6.495
+shadow_enabled = true
+omni_range = 24.8868
 
 [node name="sprits" type="Node" parent="."]
 
@@ -120,3 +123,26 @@ stream = ExtResource("7_tj8yc")
 volume_db = -11.243
 pitch_scale = 1.06
 autoplay = true
+
+[node name="dopcoll" type="Node" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="dopcoll"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6739, 0.170443, -41.0744)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dopcoll/StaticBody3D"]
+transform = Transform3D(0.956804, -0.290736, 0, 0.290736, 0.956804, 0, 0, 0, 1, -1.80255, -1.44408, -3.57784)
+shape = SubResource("BoxShape3D_ttrpu")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="dopcoll"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6051, 0.68667, -41.0744)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dopcoll/StaticBody3D2"]
+transform = Transform3D(0.956804, -0.290736, 0, 0.290736, 0.956804, 0, 0, 0, 1, 0.592661, -1.44408, -3.57784)
+shape = SubResource("BoxShape3D_ttrpu")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="dopcoll"]
+transform = Transform3D(-4.52428e-08, 4.24603e-10, -1, 0.267188, 0.963644, -1.16792e-08, 0.963644, -0.267188, -4.37114e-08, -388.895, 34.9497, 8.74383)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dopcoll/StaticBody3D3"]
+transform = Transform3D(0.956804, -0.290736, 0, 0.290736, 0.956804, 0, 0, 0, 1, 0.592661, -1.44408, -3.57784)
+shape = SubResource("BoxShape3D_ttrpu")

@@ -43,5 +43,5 @@ autoplay = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98682, 0)
 light_energy = 4.14
 shadow_enabled = true
-omni_range = 28.8
+omni_range = 56.5695
 omni_attenuation = 1.27456

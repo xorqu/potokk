@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	move_and_slide()
 	walk_sound_play()
-	if position.y < -20:
+	if position.y < -60:
 		death()
 
 
