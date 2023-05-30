@@ -1,11 +1,11 @@
 newmtl bricks2
 map_Kd ..\textures\bricks2.png
 
-newmtl concrete
-map_Kd ..\textures\concrete.png
-
 newmtl concrete2
 map_Kd ..\textures\concrete2.png
+
+newmtl gravel
+map_Kd ..\textures\gravel.png
 
 newmtl pattern
 map_Kd ..\textures\pattern.png
