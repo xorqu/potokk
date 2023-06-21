@@ -12,7 +12,7 @@ func _process(delta):
 	
 	
 func texture_filtering_fix():
-	var mesh_instance = $Level2
+	var mesh_instance = $Desert_mesh
 	for index in mesh_instance.mesh.get_surface_count():
 		var material = mesh_instance.mesh.surface_get_material(index)
 		material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC
