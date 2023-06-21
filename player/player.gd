@@ -2,15 +2,18 @@ extends CharacterBody3D
 class_name Player
 
 @export_category("Player")
-@export_range(1, 35, 1) var speed: float = 14 # m/s
+
 @export_range(10, 400, 1) var acceleration: float = 100 # m/s^2
 
-@export_range(0.1, 4.0, 0.1) var jump_height: float = 3.5 # m
+@export_range(0.1, 4.0, 0.1) var jump_height: float = 2.5 # m
 @export_range(0.1, 9.25, 0.05, "or_greater") var camera_sens: float = 160
 
 #var hp = 100
 #var max_hp = 150
 
+var speed: float = 7.0 # m/s
+var speed_default: float = 7.0
+var speed_shift: float = 40.0
 
 @export var state : Player_state
 
@@ -40,8 +43,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
 	if Input.is_action_just_pressed("space"): jumping = true
 	if Input.is_action_just_pressed("ui_cancel"): get_tree().quit()
-	if Input.is_action_just_pressed("shift"): speed = 30
-	if Input.is_action_just_released("shift"): speed = 14
+	if Input.is_action_just_pressed("shift"): speed = speed_shift
+	if Input.is_action_just_released("shift"): speed = speed_default
 	
 
 func _physics_process(delta: float) -> void:

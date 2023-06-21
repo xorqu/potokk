@@ -36,7 +36,7 @@ debug_shape_thickness = 5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226575, -0.4, -0.7)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0550473, -0.288348)
+transform = Transform3D(0.999596, 0, 0.0284276, 0, 1, 0, -0.0284276, 0, 0.999596, 0.596917, -0.0550473, -0.288348)
 light_energy = 7.936
 light_specular = 0.019
 shadow_enabled = true
