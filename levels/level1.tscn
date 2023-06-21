@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxh4ccvgkqnyy"]
+[gd_scene load_steps=10 format=3 uid="uid://dxh4ccvgkqnyy"]
 
 [ext_resource type="Script" path="res://levels/level1.gd" id="1_gtqee"]
 [ext_resource type="PackedScene" uid="uid://dffgt2qm2t6q8" path="res://player/player.tscn" id="1_xou5w"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dja4011dsoe8s" path="res://textures/wRZ5XKGzRaI.jpg" id="4_dyf4f"]
 [ext_resource type="Texture2D" uid="uid://jh0luqtrgpgq" path="res://textures/e6IUv1KOlqE.jpg" id="5_fr8xj"]
 [ext_resource type="Texture2D" uid="uid://divkip60anxwk" path="res://textures/JCbJW9qEYuU.jpg" id="6_d16ew"]
-[ext_resource type="FontFile" uid="uid://cdbfbi1826fs6" path="res://Monocraft.ttf" id="7_1sder"]
 [ext_resource type="AudioStream" uid="uid://bn07sclw84nox" path="res://sound/ost1.mp3" id="7_tj8yc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ttrpu"]
@@ -17,7 +16,7 @@ size = Vector3(2.24384, 1, 5.8564)
 script = ExtResource("1_gtqee")
 
 [node name="Player" parent="." instance=ExtResource("1_xou5w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -378.316, 39.0257, -9.09681)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.2563, 39.0257, -9.09681)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_6uvll")
@@ -85,22 +84,6 @@ texture = ExtResource("5_fr8xj")
 transform = Transform3D(-0.0598601, 0, 0.345421, 0, 0.471327, 0, 0.521421, 0, 0.039655, 23.203, 2.79594, -63.2533)
 texture_filter = 0
 texture = ExtResource("6_d16ew")
-
-[node name="Label3D" type="Label3D" parent="sprits"]
-transform = Transform3D(-0.9983, 0, -0.0582784, 0, 1, 0, 0.0582784, 0, -0.9983, -52.06, 4.3402, 16.7892)
-pixel_size = 0.01
-text = "наш мир соткан из тончайших каменных листов"
-font = ExtResource("7_1sder")
-font_size = 256
-outline_size = 0
-
-[node name="Label3D2" type="Label3D" parent="sprits"]
-transform = Transform3D(0.9983, 0, 0.0582784, 0, 1, 0, -0.0582784, 0, 0.9983, -187.146, 5.76889, 2.23754)
-pixel_size = 0.01
-text = "если прислушаться, то можно услышать их шёпот"
-font = ExtResource("7_1sder")
-font_size = 256
-outline_size = 0
 
 [node name="sph" type="Node" parent="."]
 

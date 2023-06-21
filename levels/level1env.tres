@@ -4,7 +4,7 @@
 glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.0627451, 0.266667, 0.278431, 1)
-fog_density = 0.0157
+fog_density = 0.0522
 adjustment_enabled = true
 adjustment_brightness = 0.97
 adjustment_contrast = 1.71

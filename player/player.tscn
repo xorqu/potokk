@@ -13,6 +13,7 @@ max_hp = 100
 height = 3.0
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(1, 0, 3.49691e-07, 0, 1, 0, -3.49691e-07, 0, 1, 0, 0, 0)
 collision_layer = 4
 script = ExtResource("1_hj8qt")
 state = SubResource("Resource_6eldn")
@@ -33,6 +34,13 @@ debug_shape_thickness = 5
 
 [node name="Item_marker" type="Marker3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226575, -0.4, -0.7)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0550473, -0.288348)
+light_energy = 7.936
+shadow_enabled = true
+spot_range = 26.8012
+spot_angle = 46.5507
 
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")
