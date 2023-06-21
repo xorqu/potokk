@@ -1,7 +1,7 @@
-# Blender 3.5.0 MTL File: 'level1.blend'
+# Blender 3.5.0 MTL File: 'level2.blend'
 # www.blender.org
 
-newmtl Material.001
+newmtl Desert
 Ns 0.000000
 Ka 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
@@ -10,3 +10,13 @@ Ni 1.450000
 d 1.000000
 illum 2
 map_Kd textures/desert.png
+
+newmtl Desert_rock
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd textures/desert_rock.png
