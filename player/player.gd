@@ -40,6 +40,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
 	if Input.is_action_just_pressed("space"): jumping = true
 	if Input.is_action_just_pressed("ui_cancel"): get_tree().quit()
+	if Input.is_action_just_pressed("shift"): speed = 30
+	if Input.is_action_just_released("shift"): speed = 14
 	
 
 func _physics_process(delta: float) -> void:

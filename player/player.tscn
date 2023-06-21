@@ -23,8 +23,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("CapsuleShape3D_pdjtu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-fov = 120.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45299, 0)
+fov = 80.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -38,13 +38,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226575, -0.4, -0.7)
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0550473, -0.288348)
 light_energy = 7.936
+light_specular = 0.019
 shadow_enabled = true
-spot_range = 26.8012
-spot_angle = 46.5507
+spot_range = 28.531
+spot_angle = 44.99
+spot_angle_attenuation = 1.56917
 
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")
 volume_db = -2.533
+pitch_scale = 0.7
 autoplay = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
