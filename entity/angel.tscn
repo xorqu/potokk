@@ -55,25 +55,25 @@ _data = {
 script = ExtResource("2_pbmm0")
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83871, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.182568, 0)
 
 [node name="Angel0" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, -0.742926, -0.669373, 0, 0.669373, -0.742926, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -0.990172, 0.139852, 0, -0.139852, -0.990172, 0, 0, 0)
 mesh = ExtResource("1_yv6qf")
 skeleton = NodePath("../..")
 
 [node name="Angel1" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(0.784109, 0.528727, -0.324993, -0.620086, 0.689212, -0.374807, 0.0258188, 0.495413, 0.868274, 0, 0, 0)
+transform = Transform3D(-0.467235, 0.812608, -0.348368, -0.867061, -0.498202, 0.000797808, -0.172909, 0.302428, 0.937358, 0, 0, 0)
 mesh = ExtResource("2_5fk3b")
 skeleton = NodePath("../..")
 
 [node name="Angel2" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(0.931449, 0.325318, -0.163004, -0.28074, 0.927498, 0.246844, 0.231489, -0.18416, 0.955248, 0, 0, 0)
+transform = Transform3D(0.965607, 0.250035, -0.0713025, -0.100378, 0.61147, 0.784875, 0.239846, -0.750724, 0.615538, 0, 0, 0)
 mesh = ExtResource("3_4himl")
 skeleton = NodePath("../..")
 
 [node name="Angel3" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(-0.464452, -0.507331, 0.725879, 0.00573557, -0.821354, -0.570391, 0.88558, -0.260756, 0.384389, 0, 0, 0)
+transform = Transform3D(-0.611862, -0.75876, 0.223404, 0.0504195, -0.319285, -0.946317, 0.789356, -0.567751, 0.233615, 0, 0, 0)
 mesh = ExtResource("4_u4dny")
 skeleton = NodePath("../..")
 
