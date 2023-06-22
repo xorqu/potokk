@@ -18,3 +18,4 @@ func texture_filtering_fix():
 	for index in mesh_instance.mesh.get_surface_count():
 		var material = mesh_instance.mesh.surface_get_material(index)
 		material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC
+

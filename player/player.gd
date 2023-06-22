@@ -13,7 +13,7 @@ class_name Player
 
 var speed: float = 7.0 # m/s
 var speed_default: float = 7.0
-var speed_shift: float = 40.0
+var speed_shift: float = 20.0
 
 @export var state : Player_state
 

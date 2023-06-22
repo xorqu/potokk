@@ -77,6 +77,11 @@ transform = Transform3D(-0.464452, -0.507331, 0.725879, 0.00573557, -0.821354, -
 mesh = ExtResource("4_u4dny")
 skeleton = NodePath("../..")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D"]
+light_energy = 6.098
+shadow_enabled = true
+omni_range = 19.6494
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_xrthb")
