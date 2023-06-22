@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://mww2upe3a1hv"]
+
+[ext_resource type="ArrayMesh" uid="uid://d10l843nwqffc" path="res://entity/angel0.obj" id="1_yv6qf"]
+[ext_resource type="ArrayMesh" uid="uid://b133pgqpfeg5o" path="res://entity/angel1.obj" id="2_5fk3b"]
+[ext_resource type="Script" path="res://entity/angel.gd" id="2_pbmm0"]
+[ext_resource type="ArrayMesh" uid="uid://banra4q6jnh5w" path="res://entity/angel2.obj" id="3_4himl"]
+[ext_resource type="ArrayMesh" uid="uid://dhs251ouaokcd" path="res://entity/angel3.obj" id="4_u4dny"]
+
+[sub_resource type="Animation" id="Animation_2u1hx"]
+resource_name = "3ring"
+length = 12.0
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Angel0")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(2.8, 1, 0, 0, 0, 1, 5.6, 1, -1, 0, 0, 0, 11.9, 1, -0.009, 0, 0, -1)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Angel1")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0.5, 1, 0.237, -0.078, 0.138, 0.959, 7.1, 1, 0.153, -0.089, -0.852, 0.493, 9.5, 1, 0.234, -0.076, 0.13, 0.961)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Angel2")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.104, 0.104, 0.183, -0.972, 4.7, 1, 0.704, 0.063, 0.029, -0.707, 10, 1, 0.104005, -0.104005, -0.183009, 0.972046)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Angel3")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0.4, 1, -0.617, -0.298, -0.72, 0.106, 5.2, 1, 0.263, -0.615, 0.671, 0.319, 11.9, 1, -0.617, -0.298, -0.72, 0.106)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrthb"]
+_data = {
+"angel_animation": SubResource("Animation_2u1hx")
+}
+
+[node name="Angel" type="Node3D"]
+script = ExtResource("2_pbmm0")
+
+[node name="Angel0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999424, -0.0339231, 0, 0.0339231, 0.999424, 0, 0, 0)
+mesh = ExtResource("1_yv6qf")
+
+[node name="Angel1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.284923, -0.941132, 0.181907, 0.936487, -0.313788, -0.156617, 0.204478, 0.125729, 0.970763, 0, 0, 0)
+mesh = ExtResource("2_5fk3b")
+
+[node name="Angel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.983464, 0.174896, -0.0470075, 0.00329239, 0.242253, 0.970208, 0.181073, -0.954319, 0.237671, 0, 0, 0)
+mesh = ExtResource("3_4himl")
+
+[node name="Angel3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.65294, -0.757392, -0.00522521, 0.0966082, -0.0764385, -0.992383, 0.751224, -0.648471, 0.12308, 0, 0, 0)
+mesh = ExtResource("4_u4dny")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xrthb")
+}
