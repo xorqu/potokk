@@ -115,4 +115,4 @@ material_override = SubResource("ShaderMaterial_6iats")
 radius = 1.5343
 
 [node name="Angel" parent="." instance=ExtResource("8_ql784")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84158, 6.89061, 2.29331)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84158, 7.22979, 2.29331)

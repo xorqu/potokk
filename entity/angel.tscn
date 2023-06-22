@@ -13,31 +13,38 @@ loop_mode = 1
 tracks/0/type = "rotation_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Angel0")
+tracks/0/path = NodePath("Node3D/Angel0")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(2.8, 1, 0, 0, 0, 1, 5.6, 1, -1, 0, 0, 0, 11.9, 1, -0.009, 0, 0, -1)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Angel1")
+tracks/1/path = NodePath("Node3D/Angel1")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0.5, 1, 0.237, -0.078, 0.138, 0.959, 7.1, 1, 0.153, -0.089, -0.852, 0.493, 9.5, 1, 0.234, -0.076, 0.13, 0.961)
 tracks/2/type = "rotation_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Angel2")
+tracks/2/path = NodePath("Node3D/Angel2")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, -0.104, 0.104, 0.183, -0.972, 4.7, 1, 0.704, 0.063, 0.029, -0.707, 10, 1, 0.104005, -0.104005, -0.183009, 0.972046)
 tracks/3/type = "rotation_3d"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Angel3")
+tracks/3/path = NodePath("Node3D/Angel3")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0.4, 1, -0.617, -0.298, -0.72, 0.106, 5.2, 1, 0.263, -0.615, 0.671, 0.319, 11.9, 1, -0.617, -0.298, -0.72, 0.106)
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node3D")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0.1, 1, 0, 2, 0, 5.9, 1, 0, 0, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xrthb"]
 _data = {
@@ -47,21 +54,28 @@ _data = {
 [node name="Angel" type="Node3D"]
 script = ExtResource("2_pbmm0")
 
-[node name="Angel0" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999424, -0.0339231, 0, 0.0339231, 0.999424, 0, 0, 0)
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83871, 0)
+
+[node name="Angel0" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -0.742926, -0.669373, 0, 0.669373, -0.742926, 0, 0, 0)
 mesh = ExtResource("1_yv6qf")
+skeleton = NodePath("../..")
 
-[node name="Angel1" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.284923, -0.941132, 0.181907, 0.936487, -0.313788, -0.156617, 0.204478, 0.125729, 0.970763, 0, 0, 0)
+[node name="Angel1" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.784109, 0.528727, -0.324993, -0.620086, 0.689212, -0.374807, 0.0258188, 0.495413, 0.868274, 0, 0, 0)
 mesh = ExtResource("2_5fk3b")
+skeleton = NodePath("../..")
 
-[node name="Angel2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.983464, 0.174896, -0.0470075, 0.00329239, 0.242253, 0.970208, 0.181073, -0.954319, 0.237671, 0, 0, 0)
+[node name="Angel2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.931449, 0.325318, -0.163004, -0.28074, 0.927498, 0.246844, 0.231489, -0.18416, 0.955248, 0, 0, 0)
 mesh = ExtResource("3_4himl")
+skeleton = NodePath("../..")
 
-[node name="Angel3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.65294, -0.757392, -0.00522521, 0.0966082, -0.0764385, -0.992383, 0.751224, -0.648471, 0.12308, 0, 0, 0)
+[node name="Angel3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-0.464452, -0.507331, 0.725879, 0.00573557, -0.821354, -0.570391, 0.88558, -0.260756, 0.384389, 0, 0, 0)
 mesh = ExtResource("4_u4dny")
+skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
