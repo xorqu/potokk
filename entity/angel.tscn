@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://mww2upe3a1hv"]
+[gd_scene load_steps=6 format=3 uid="uid://mww2upe3a1hv"]
 
 [ext_resource type="ArrayMesh" uid="uid://d10l843nwqffc" path="res://entity/angel0.obj" id="1_yv6qf"]
 [ext_resource type="ArrayMesh" uid="uid://b133pgqpfeg5o" path="res://entity/angel1.obj" id="2_5fk3b"]
@@ -6,74 +6,29 @@
 [ext_resource type="ArrayMesh" uid="uid://banra4q6jnh5w" path="res://entity/angel2.obj" id="3_4himl"]
 [ext_resource type="ArrayMesh" uid="uid://dhs251ouaokcd" path="res://entity/angel3.obj" id="4_u4dny"]
 
-[sub_resource type="Animation" id="Animation_2u1hx"]
-resource_name = "3ring"
-length = 12.0
-loop_mode = 1
-tracks/0/type = "rotation_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node3D/Angel0")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(2.8, 1, 0, 0, 0, 1, 5.6, 1, -1, 0, 0, 0, 11.9, 1, -0.009, 0, 0, -1)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node3D/Angel1")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0.5, 1, 0.237, -0.078, 0.138, 0.959, 7.1, 1, 0.153, -0.089, -0.852, 0.493, 9.5, 1, 0.234, -0.076, 0.13, 0.961)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node3D/Angel2")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.104, 0.104, 0.183, -0.972, 4.7, 1, 0.704, 0.063, 0.029, -0.707, 10, 1, 0.104005, -0.104005, -0.183009, 0.972046)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node3D/Angel3")
-tracks/3/interp = 2
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0.4, 1, -0.617, -0.298, -0.72, 0.106, 5.2, 1, 0.263, -0.615, 0.671, 0.319, 11.9, 1, -0.617, -0.298, -0.72, 0.106)
-tracks/4/type = "position_3d"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node3D")
-tracks/4/interp = 2
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0.1, 1, 0, 2, 0, 5.9, 1, 0, 0, 0)
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrthb"]
-_data = {
-"angel_animation": SubResource("Animation_2u1hx")
-}
-
 [node name="Angel" type="Node3D"]
 script = ExtResource("2_pbmm0")
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.182568, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Angel0" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, -0.990172, 0.139852, 0, -0.139852, -0.990172, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999999, -0.00108062, 0, 0.00108062, 0.999999, 0, 0, 0)
 mesh = ExtResource("1_yv6qf")
 skeleton = NodePath("../..")
 
 [node name="Angel1" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(-0.467235, 0.812608, -0.348368, -0.867061, -0.498202, 0.000797808, -0.172909, 0.302428, 0.937358, 0, 0, 0)
+transform = Transform3D(0.928213, -0.366826, -0.0621285, 0.296472, 0.830159, -0.472165, 0.224779, 0.41985, 0.879318, 0, 0, 0)
 mesh = ExtResource("2_5fk3b")
 skeleton = NodePath("../..")
 
 [node name="Angel2" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(0.965607, 0.250035, -0.0713025, -0.100378, 0.61147, 0.784875, 0.239846, -0.750724, 0.615538, 0, 0, 0)
+transform = Transform3D(0.911381, 0.334152, -0.240263, -0.37742, 0.911381, -0.164128, 0.164127, 0.240263, 0.956732, 0, 0, 0)
 mesh = ExtResource("3_4himl")
 skeleton = NodePath("../..")
 
 [node name="Angel3" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(-0.611862, -0.75876, 0.223404, 0.0504195, -0.319285, -0.946317, 0.789356, -0.567751, 0.233615, 0, 0, 0)
+transform = Transform3D(-0.215274, 0.522493, 0.825021, 0.215853, -0.798474, 0.562003, 0.952399, 0.299068, 0.0591091, 0, 0, 0)
 mesh = ExtResource("4_u4dny")
 skeleton = NodePath("../..")
 
@@ -81,8 +36,3 @@ skeleton = NodePath("../..")
 light_energy = 6.098
 shadow_enabled = true
 omni_range = 19.6494
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_xrthb")
-}
